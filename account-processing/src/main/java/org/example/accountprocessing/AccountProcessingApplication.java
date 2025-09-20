@@ -1,11 +1,11 @@
-package org.example.creditprocessing;
+package org.example.accountprocessing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CreditProcess {
+public class AccountProcessingApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CreditProcess.class, args);
+        SpringApplication.run(AccountProcessingApplication.class, args);
     }
 }
