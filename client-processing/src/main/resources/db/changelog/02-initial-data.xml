@@ -21,7 +21,7 @@
 
     <changeSet id="insert-test-clients" author="you">
         <insert tableName="clients">
-            <column name="client_id" value="CL000001"/>
+            <column name="client_id" value="770100000001"/>
             <column name="user_id" valueNumeric="1"/>
             <column name="first_name" value="Egor"/>
             <column name="middle_name" value="Aaaa"/>
@@ -34,7 +34,7 @@
         </insert>
 
         <insert tableName="clients">
-            <column name="client_id" value="CL000002"/>
+            <column name="client_id" value="770200000002"/>
             <column name="user_id" valueNumeric="2"/>
             <column name="first_name" value="Danila"/>
             <column name="middle_name" value="B"/>

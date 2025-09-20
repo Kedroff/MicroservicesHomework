@@ -22,10 +22,6 @@
             <groupId>org.example</groupId>
             <artifactId>utility</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
