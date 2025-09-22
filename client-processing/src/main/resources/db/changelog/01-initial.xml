@@ -113,4 +113,23 @@
                                  referencedColumnNames="id"/>
     </changeSet>
 
+    <changeSet id="create-blacklist-registry" author="you">
+        <createTable tableName="blacklist_registry">
+            <column name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="document_type" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="document_id" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="blacklisted_at" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reason" type="VARCHAR(128)"/>
+            <column name="blacklist_expiration_date" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog>

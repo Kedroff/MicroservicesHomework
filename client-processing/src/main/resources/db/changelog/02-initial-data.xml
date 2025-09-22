@@ -81,4 +81,14 @@
         </insert>
     </changeSet>
 
+    <changeSet id="insert-test-blacklist" author="you">
+        <insert tableName="blacklist_registry">
+            <column name="document_type" value="PASSPORT"/>
+            <column name="document_id" value="1111111111"/>
+            <column name="blacklisted_at" valueDate="2024-12-31T10:00:00"/>
+            <column name="reason" value="podozritelno"/>
+            <column name="blacklist_expiration_date" valueDate="2030-12-31T23:59:59"/>
+        </insert>
+    </changeSet>
+
 </databaseChangeLog>
