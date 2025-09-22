@@ -1,9 +1,26 @@
 package enums.accountProcessing;
 
-public enum CardStatus {
-    ACTIVE,
-    BLOCKED,
-    EXPIRED
-}
+import lombok.Getter;
+import java.util.Arrays;
 
-// тут инфы из ТЗ не было какие статус-коды должны быть, добавил от себя :)
+@Getter
+public enum CardStatus {
+    OPENED("OPENED"),
+    ACTIVE("ACTIVE"),
+    CLOSED("CLOSED"),
+    FROZEN("FROZEN"),
+    ARRESTED("ARRESTED");
+
+    private final String value;
+
+    CardStatus(String value) {
+        this.value = value;
+    }
+
+    public static CardStatus fromValue(String value) {
+        return Arrays.stream(values())
+                .filter(v -> v.value.equalsIgnoreCase(value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Unknown CardStatus: " + value));
+    }
+}

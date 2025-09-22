@@ -1,9 +1,24 @@
 package enums.accountProcessing;
 
-public enum CardPaymentSystem {
-    VISA,
-    MASTERCARD,
-    MIR
-}
+import lombok.Getter;
+import java.util.Arrays;
 
-// тут инфы из ТЗ не было какие статус-коды должны быть, добавил от себя :)
+@Getter
+public enum CardPaymentSystem {
+    VISA("VISA"),
+    MASTERCARD("MASTERCARD"),
+    MIR("MIR");
+
+    private final String value;
+
+    CardPaymentSystem(String value) {
+        this.value = value;
+    }
+
+    public static CardPaymentSystem fromValue(String value) {
+        return Arrays.stream(values())
+                .filter(v -> v.value.equalsIgnoreCase(value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Unknown CardPaymentSystem: " + value));
+    }
+}

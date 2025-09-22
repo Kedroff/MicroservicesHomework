@@ -50,7 +50,7 @@
             <column name="amount" valueNumeric="500.00"/>
             <column name="is_credit" valueBoolean="true"/>
             <column name="payed_at" valueDate="2025-09-20T10:15:00"/>
-            <column name="type" value="INTEREST"/>
+            <column name="type" value="DEPOSIT"/>
         </insert>
 
         <insert tableName="payments">
@@ -59,7 +59,7 @@
             <column name="amount" valueNumeric="1000.00"/>
             <column name="is_credit" valueBoolean="false"/>
             <column name="payed_at" valueDate="2025-09-21T12:00:00"/>
-            <column name="type" value="PRINCIPAL"/>
+            <column name="type" value="WITHDRAWAL"/>
         </insert>
     </changeSet>
 
@@ -67,18 +67,18 @@
         <insert tableName="transactions">
             <column name="account_id" valueNumeric="1"/>
             <column name="card_id" valueNumeric="1"/>
-            <column name="type" value="PURCHASE"/>
+            <column name="type" value="TRANSFER"/>
             <column name="amount" valueNumeric="100.50"/>
-            <column name="status" value="SUCCESS"/>
+            <column name="status" value="ACTIVE"/>
             <column name="timestamp" valueDate="2025-09-20T09:30:00"/>
         </insert>
 
         <insert tableName="transactions">
             <column name="account_id" valueNumeric="2"/>
             <column name="card_id" valueNumeric="2"/>
-            <column name="type" value="REFUND"/>
+            <column name="type" value="DEPOSIT"/>
             <column name="amount" valueNumeric="50.00"/>
-            <column name="status" value="PENDING"/>
+            <column name="status" value="OPENED"/>
             <column name="timestamp" valueDate="2025-09-21T11:00:00"/>
         </insert>
     </changeSet>
